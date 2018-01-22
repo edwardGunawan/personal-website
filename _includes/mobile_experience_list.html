@@ -1,0 +1,12 @@
+<div class="company-container">
+  {% for job in site.data.experience %}
+    <div class="name-time columns">
+      <div class="name column is-half">
+        <p>{{ job.name }} <span style="display:block"> {{ job.time }} </span></p>
+      </div>
+      <div class="date column is-half" style="height:30%">
+        <p>{{ job.position }}</p>
+      </div>
+    </div>
+    {% endfor %}
+</div>
