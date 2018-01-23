@@ -1,4 +1,31 @@
+header.header-container{
+  padding-top:200px;
+  max-width:600px;
+}
 
-section.experience div.experience-container .job .date{
-  font-size:15px;
+section:not(.project){
+  height:100vh;
+}
+
+section {
+  .experience{
+    /*
+      Change experience padding to closer to each other on the mobile version */
+    div.experience-container {
+      @media screen and (max-width: 768px){
+          div.name{
+            padding-bottom:0;
+          }
+          div.date{
+            padding-top:0;
+          }
+      }
+
+      .job .date{
+        font-size:15px;
+      }
+    }
+
+  }
+
 }

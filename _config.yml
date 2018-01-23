@@ -34,7 +34,15 @@ permalink: pretty
 sass:
   sass_dir: _sass
   style: compressed
-  
+
+# set frontmatter values through defaults
+defaults:
+  - scope:
+      path: assets/img
+    values: # set the front-matter variable in the static file
+      image: true # look for jekyll assets img site
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

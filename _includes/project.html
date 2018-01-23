@@ -1,10 +1,20 @@
-<h6>Project</h6>
-<div class="project-container container">
-  <div class="project1">
-    project 1
+<div class="columns">
+  <div class="is-offset-1 column">
+    <h6>Project</h6>
   </div>
-  <div class="project2">
-    project 2
-  </div>
+</div>
 
+<div class="project-container columns">
+  <div class="is-offset-1 is-1 column">
+  </div>
+  <div class="column is-offset-1 is-7 tile is-ancestor">
+    <div class="tile is-parent is-vertical">
+      {% assign image_files = site.static_files | where: "image", true %}
+      {% for myimage in image_files %}
+        <figure class="{{ myimage.basename }} is-square tile is-child">
+          <img src="{{ myimage.path }}" alt="{{ myimage.basename }}"/>
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
 </div>

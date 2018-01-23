@@ -3,9 +3,12 @@
   <div class="job column is-8">
       {% include experience_list.html %}
       <div style="padding-top:40px;">
-        <a href="#"> View my Resume </a>
+        {% for page in site.pages %}
+          {% if page.title == 'Resume' %}
+          <a target="_blank" href="{{ page.url | prepend:site.baseurl }}">  View My Resume </a>
+          {% endif %}
+        {% endfor %}
       </div>
-
   </div>
 
 </div>
