@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer id="footer" class="footer">
   <div class="columns container is-mobile">
     <div class="column is-offset-1 is-two-third">
       <p> Developed &amp Designed by <br>
@@ -6,7 +6,7 @@
     </div>
     <ul class="column columns is-one-third">
       {% for social in site.data.social %}
-      <li class="column is-one-third is-narrow" style="">
+      <li class="column is-one-third is-narrow">
         {% if social.name == 'Email' %}
          <a href="mailto: {{ social.link }}"> {{ social.name }} </a>
          {% else %}

@@ -1,14 +1,24 @@
 <div class="experience-container columns">
-  <h6 class="column is-offset-1 is-2 is-narrow">Experience</h6>
+  <h5 class="column experience-title is-offset-1 is-2 is-narrow">Experience</h5>
   <div class="job column is-8">
-      {% include experience_list.html %}
-      <div style="padding-top:40px;">
-        {% for page in site.pages %}
-          {% if page.title == 'Resume' %}
-          <a target="_blank" href="{{ page.url | prepend:site.baseurl }}">  View My Resume </a>
-          {% endif %}
+    <div class="company-container">
+      {% for job in site.data.experience %}
+        <div class="name-time-position columns">
+          <div class="name-position column is-half">
+            <p><a id="name" href="{{ job.link }}" target="_blank">{{ job.name }}</a> <span id="position" style="display:block"> {{ job.position }} </span></p>
+          </div>
+          <div class="date column is-half">
+            <p>{{ job.time }}</p>
+          </div>
+        </div>
         {% endfor %}
-      </div>
+    </div>
+    <div class="resume">
+      {% for page in site.pages %}
+        {% if page.title == 'Resume' %}
+        <a target="_blank" href="{{ page.url | prepend:site.baseurl }}">  View My Resume </a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
-
 </div>

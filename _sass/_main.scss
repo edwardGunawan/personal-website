@@ -1,31 +1,115 @@
+@import "custom-variable";
+
+*{
+  font-family:$overall-font;
+}
+
+
+/*
+  Header container layout
+*/
 header.header-container{
   padding-top:200px;
   max-width:600px;
 }
 
-section:not(.project){
+/*
+  only project section did not expand viewport height
+*/
+section:not(#project){
   height:100vh;
 }
 
-section {
-  .experience{
-    /*
-      Change experience padding to closer to each other on the mobile version */
-    div.experience-container {
-      @media screen and (max-width: 768px){
-          div.name{
-            padding-bottom:0;
-          }
-          div.date{
-            padding-top:0;
-          }
-      }
-
-      .job .date{
-        font-size:15px;
-      }
+/*
+  Background
+*/
+#background {
+  .background-title{
+    h5{
+      color:$grey;
     }
+  }
+  .background-description{
+    font-size:17px;
+  }
+}
 
+
+/*
+  Experience
+*/
+#experience {
+  .experience-title{
+    color:$grey;
+  }
+  /*
+    Change experience padding to closer to each other on the mobile version
+  */
+  div.experience-container {
+    @media screen and (max-width: 769px){
+        .name-position{
+          padding-bottom:0;
+        }
+        .date{
+          padding-top:0;
+        }
+    }
+    .job {
+      #name{
+        font-weight: bold;
+        color:inherit;
+      }
+      .date{
+        font-size:14px;
+      }
+
+    }
   }
 
+  // resume section
+  .resume{
+    padding-top:40px;
+    font-size:20px;
+    // Transition when cursor
+    a {
+      color:inherit;
+      -webkit-transition: color 0.1s ease-out;
+      transition: color 0.1s ease-out;
+    }
+    a:hover{
+      color:$belizehole;
+      text-decoration:underline;
+    }
+  }
+}
+
+
+/*
+  Project
+*/
+#project{
+  .project-title{
+    color:$grey;
+  }
+}
+
+
+/*
+  Footer
+*/
+#footer{
+  font-size:17px;
+  font-weight:500;
+  text-transform:capitalize;
+
+  a {
+    color: $belizehole;
+    -webkit-transition: text-decoration .2s ease-in-out;
+    transition: text-decoration .2s ease-in-out;
+  }
+
+  a:hover{
+    color: $belizehole;
+    text-decoration:underline;
+  }
 }
