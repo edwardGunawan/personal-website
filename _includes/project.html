@@ -7,14 +7,25 @@
 <div class="project-container columns">
   <div class="is-offset-1 is-1 column">
   </div>
-  <div class="column is-offset-1 is-7 tile is-ancestor">
-    <div class="tile is-parent is-vertical">
+  <div class="column is-offset-1 is-8 tile is-ancestor">
       {% assign image_files = site.static_files | where: "image", true %}
-      {% for myimage in image_files %}
-        <figure class="{{ myimage.basename }} is-square tile is-child">
-          <img src="{{ myimage.path }}" alt="{{ myimage.basename }}"/>
-        </figure>
+      <div class="tile is-parent is-vertical">
+      {% for myimage in image_files%}
+        {% if myimage.extname == '.JPG' %}
+        <div class="img-container tile is-child">
+          <figure class="is-square tile is-child">
+            <a href="{{ myimage.link }}" target="_blank"> <img src="{{ myimage.path }}" alt="{{ myimage.basename }}"/>
+              <div class="img-overlay" style="background-color:{%if myimage.title == 'Portfolio'%}#{% endif %}{{ myimage.backgroundColor }}">
+                <h3>{{ myimage.title }}
+                  <span>___</span>
+                </h3>
+                <p> Description here</p>
+              </div>
+            </a>
+          </figure>
+        </div>
+        {% endif %}
       {% endfor %}
-    </div>
+      </div>
   </div>
 </div>
