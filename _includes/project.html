@@ -15,12 +15,12 @@
         <div class="img-container tile is-child">
           <figure class="is-square tile is-child">
             <a href="{{ myimage.link }}" target="_blank"> <img src="{{ myimage.path }}" alt="{{ myimage.basename }}"/>
-              <div class="img-overlay" style="background-color:{%if myimage.title == 'Portfolio'%}#{% endif %}{{ myimage.backgroundColor }}">
+              <figcaption class="img-overlay" style="background-color:{%if myimage.title == 'Portfolio'%}#{% endif %}{{ myimage.backgroundColor }}">
                 <h3>{{ myimage.title }}
                   <span>___</span>
                 </h3>
-                <p> Description here</p>
-              </div>
+                <p> {{ myimage.description }}</p>
+              </figcaption>
             </a>
           </figure>
         </div>

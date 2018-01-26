@@ -4,6 +4,11 @@
     <h5> Background </h5>
   </div>
   <div class="background-description column is-8">
-    {{ site.data.background }}
+    {% for para in site.data.background %}
+    <p>{{ para }}</p>
+    {% endfor %}
+    <div class="status-container">
+      <a id="status" class="column" href="">Currently seeking fulltime opportunity</a>
+    </div>
   </div>
 </div>

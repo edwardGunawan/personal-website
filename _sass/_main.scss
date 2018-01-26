@@ -4,6 +4,73 @@
   font-family:$overall-font;
 }
 
+/*
+  set initial element to be clean when Scrolling
+*/
+.fade {
+  opacity:0;
+}
+
+/*
+  Creating bounce animation for arrow up and down
+*/
+.bounce {
+  display:inline-block;
+  position:relative;
+  -moz-animation: bounce $speed infinite linear;
+  -o-animation: bounce $speed infinite linear;
+  -webkit-animation: bounce $speed infinite linear;
+  animation: bounce $speed infinite linear;
+  color:000;
+}
+
+@-webkit-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-moz-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-o-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@-ms-keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+@keyframes bounce {
+    0% { top: 0; }
+    50% { top: -0.2em; }
+    70% { top: -0.3em; }
+    100% { top: 0; }
+}
+
+/*
+  Arrow up for fixed position
+  So that when scroll down it will always be on the
+  bottom right
+  position: set with bottom and right
+*/
+.arrow-up{
+  width:35px;
+  position:fixed;
+  opacity:0;
+  transition:.2s ease-in;
+  bottom:2.5rem;
+  right:2rem;
+}
+
+
 
 /*
   Header container layout
@@ -12,6 +79,14 @@ header.header-container{
   padding-top:200px;
   max-width:600px;
 }
+
+
+#arrow-down {
+  padding-left:24px;
+  width:35px;
+}
+
+
 
 /*
   only project section did not expand viewport height
@@ -31,6 +106,25 @@ section:not(#project){
   }
   .background-description{
     font-size:17px;
+  }
+
+  .status-container{
+    padding-top:40px;
+  }
+
+  /*
+    Resume or looking for opportunity icon
+  */
+
+
+  #status {
+    font-weight:700;
+    font-size:20px;
+    color:inherit;
+  }
+
+  #status:hover{
+    color:$belizehole;
   }
 }
 
@@ -124,7 +218,7 @@ section:not(#project){
   a{
     height:auto;
   }
-
+  // how text inside the image overlay
   h3{
     position: absolute;
     padding-left:10px;
@@ -165,4 +259,5 @@ section:not(#project){
     color: $belizehole;
     text-decoration:underline;
   }
+
 }

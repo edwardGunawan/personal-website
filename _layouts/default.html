@@ -4,18 +4,24 @@
   <body>
     {% include header.html %}
     <main class="content">
-      <section id="background" class="section">
+      <section id="background" class="section fade">
         {% include background.html %}
       </section>
-      <section id="experience" class="section">
+      <section id="experience" class="section fade">
         {% include experience.html %}
       </section>
-      <section id="project" class="section">
+      <section id="project" class="section fade">
         {% include project.html %}
       </section>
     </main>
 
     {% include footer.html %}
+    <a class="arrow-up" href="#header" data-scroll>
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="#000000" d="M4.08,11.92L12,4L19.92,11.92L18.5,13.33L13,7.83V22H11V7.83L5.5,13.33L4.08,11.92M12,4H22V2H2V4H12Z" />
+      </svg>
+    </a>
+
     {% include scripts.html %}
   </body>
 </html>
