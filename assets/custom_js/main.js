@@ -200,7 +200,11 @@ $(document).ready(function(){
   // create particles canvas for the header
   $('.particles').particleground({
     dotColor: '#2980b9',
-    lineColor: '#2980b9'
+    lineColor: '#2980b9',
+    directionX: 'right',
+    particleRadius:5,
+    lineWidth:0.5,
+    parallax:true // create that parallax affect
   });
 
   // to make the section on top of the canvas
