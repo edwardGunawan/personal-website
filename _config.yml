@@ -48,21 +48,21 @@ defaults:
       title: Portfolio
       backgroundColor: ece9e6
       link: http://www.edwardhuang1.me/
-      description: description here
+      description: First iteration portfolio. Designed and developed with a concious effort avoid using any framework.
   - scope:
       path: assets/img/TimerApp.JPG
     values:
       title: Timer-app
       backgroundColor: hsl(0, 0%, 100%)
       link: http://react-timer-app-gunawan.herokuapp.com/#/?_k=vfeyg7
-      description: description here
+      description: Timer app provides timer. Designed using react to create modular layout and liquid codebase.
   - scope:
       path: assets/img/TrackMe.JPG
     values:
       title: TrackMe
       backgroundColor: hsl(0, 0%, 100%)
       link: http://trackme-gunawan.herokuapp.com/#/?_k=hi4xgt
-      description: description here
+      description: React application of helping re-arranging your todo list.
 
 
 
