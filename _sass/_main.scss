@@ -108,23 +108,28 @@ section:not(#project){
     font-size:17px;
   }
 
+
+
+  /*
+    Status word in background
+  */
   .status-container{
     padding-top:40px;
   }
 
-  /*
-    Resume or looking for opportunity icon
-  */
-
-
   #status {
-    font-weight:700;
-    font-size:20px;
+    font-weight:500;
+    padding-left:0;
+    width:60%;
+    font-size:17px;
+    letter-spacing:2px;
     color:inherit;
+    transition: color .2s ease-in-out;
   }
 
   #status:hover{
     color:$belizehole;
+    text-decoration:underline;
   }
 }
 
@@ -163,12 +168,14 @@ section:not(#project){
   // resume section
   .resume{
     padding-top:40px;
-    font-size:20px;
+    font-size:17px;
     // Transition when cursor
     a {
       color:inherit;
+      font-weight:500;
       -webkit-transition: color 0.1s ease-out;
       transition: color 0.1s ease-out;
+      letter-spacing:2px;
     }
     a:hover{
       color:$belizehole;

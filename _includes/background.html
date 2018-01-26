@@ -8,7 +8,11 @@
     <p>{{ para }}</p>
     {% endfor %}
     <div class="status-container">
-      <a id="status" class="column" href="">Currently seeking fulltime opportunity</a>
+      {% for resume in site.static_files %}
+        {% if resume.extname == '.pdf' %}
+          <a id="status" class="column" target="_blank" href="{{ resume.path }}">Currently seeking full-time opportunities!</a>
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>

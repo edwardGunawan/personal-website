@@ -14,11 +14,11 @@
         {% endfor %}
     </div>
     <div class="resume">
-      {% for page in site.pages %}
-        {% if page.title == 'Resume' %}
-        <a target="_blank" href="{{ page.url | prepend:site.baseurl }}">
-          View My Resume
-        </a>
+      {% for page in site.static_files %}
+        {% if page.extname == '.pdf' %}
+          <a target="_blank" href="{{ page.path }}">
+            View My Resume
+          </a>
         {% endif %}
       {% endfor %}
     </div>
