@@ -11,6 +11,7 @@
       {% assign image_files = site.static_files | where: "image", true %}
       <div class="tile is-parent is-vertical">
       {% for myimage in image_files%}
+        {{ myimage.path }}
         {% if myimage.extname == '.JPG' %}
         <div class="img-container tile is-child">
           <figure class="is-square tile is-child">
