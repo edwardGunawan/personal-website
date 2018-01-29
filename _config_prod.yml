@@ -1,0 +1,81 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Edward Huang
+email: edwardgunawan880@yahoo.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to Edward Huang's Personal Website
+baseurl: "/personal-website/" # the subpath of your site, e.g. /blog
+url: "https://edwardgunawan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: edwardGunawan
+encoding: ENCODING
+
+
+# Build settings
+markdown: kramdown
+
+# Include the file from pages
+include: ['_pages']
+
+# Create pretty permanent link
+permalink: pretty
+
+# create sass css style-page
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# set frontmatter values through defaults
+defaults:
+  - scope:
+      path: assets/img
+    values: # set the front-matter variable in the static file
+      image: true # look for jekyll assets img site
+    # setting front-matter for project image
+  - scope:
+      path: assets/img/Portfolio.JPG
+    values:
+      title: Portfolio
+      backgroundColor: ece9e6
+      link: http://www.edwardhuang1.me/
+      description: First iteration portfolio. Designed and developed with a concious effort avoid using any framework.
+  - scope:
+      path: assets/img/TimerApp.JPG
+    values:
+      title: Timer-app
+      backgroundColor: hsl(0, 0%, 100%)
+      link: http://react-timer-app-gunawan.herokuapp.com/#/?_k=vfeyg7
+      description: Timer app provides timer. Designed using react to create modular layout and liquid codebase.
+  - scope:
+      path: assets/img/TrackMe.JPG
+    values:
+      title: TrackMe
+      backgroundColor: hsl(0, 0%, 100%)
+      link: http://trackme-gunawan.herokuapp.com/#/?_k=hi4xgt
+      description: React application of helping re-arranging your todo list.
+
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
