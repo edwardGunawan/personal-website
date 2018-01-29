@@ -16,7 +16,7 @@
     <div class="resume">
       {% for page in site.static_files %}
         {% if page.extname == '.pdf' %}
-          <a target="_blank" href="{{ page.path }}">
+          <a target="_blank" href="{{ page.path | relative_url }}">
             View My Resume
           </a>
         {% endif %}
