@@ -2,6 +2,6 @@
 <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
 {% for files in site.static_files %}
   {% if files.extname == '.js' %}
-    <script type="text/javascript" src="{{ files.path }}"></script>
+    <script type="text/javascript" src="{{ files.path | relative_url }}"></script>
   {% endif %}
 {% endfor %}
