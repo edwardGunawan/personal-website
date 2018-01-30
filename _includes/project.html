@@ -9,6 +9,7 @@
   </div>
   <div class="column is-offset-1 is-8 tile is-ancestor">
     {% for page in site.static_files %}
+     {{ page.image }}
       {% if page.image == true %}
         {{ page.path }}
       {% endif %}
