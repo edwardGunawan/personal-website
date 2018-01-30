@@ -8,16 +8,9 @@
   <div class="is-offset-1 is-1 column">
   </div>
   <div class="column is-offset-1 is-8 tile is-ancestor">
-    {% for page in site.static_files %}
-     {{ page.image }}
-      {% if page.image == true %}
-        {{ page.path }}
-      {% endif %}
-    {% endfor %}
       {% assign image_files = site.static_files | where: "image", true %}
       <div class="tile is-parent is-vertical">
       {% for myimage in image_files%}
-        {{ myimage.path }}
         {% if myimage.extname == '.JPG' %}
         <div class="img-container tile is-child">
           <figure class="is-square tile is-child">
