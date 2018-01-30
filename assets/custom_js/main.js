@@ -24,37 +24,37 @@ $(document).ready(function(){
   const controller = new SweetScroll(options);
 
     /* windows fade in and out when scrolling down  */
-  function fade(pageLoad){
-    $window = $(window);
+  // function fade(pageLoad){
+  //   $window = $(window);
+  //
+  //   var window_height = $window.height();
+  //   var window_top_position = $window.scrollTop();
+  //   var window_bottom_position = (window_top_position + window_height);
+  //   // var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+  //
+  //   var min = 0.1;
+  //   var max = 0.9;
+  //   var threshold = 0.04;
 
-    var window_height = $window.height();
-    var window_top_position = $window.scrollTop();
-    var window_bottom_position = (window_top_position + window_height);
-    // var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-
-    var min = 0.1;
-    var max = 0.9;
-    var threshold = 0.04;
-
-    $('.fade').each(function(){
-      $element = $(this);
-
-      var element_height = $element.outerHeight();
-      var element_top_position = $element.offset().top;
-      var element_bottom_position = (element_top_position + element_height);
-
-      /* check the location of each desired element */
-      var objectBottom = $(this).offset().top + 200; //+ $(this).height();
-      // console.log(" object Bottom" ,objectBottom);
-      /* If the element is completely within bounds of the window, fade it in */
-      // console.log('objet bottom is : '+ objectBottom + " window_bottom_position is :" + window_bottom_position);
-      if(objectBottom < window_bottom_position){ // object comes into view (scrolling down)
-        if($(this).css('opacity') < (min+threshold || pageLoad)){$(this).fadeTo(300,max);}
-      }else {  // object goes out of view (scrolling up)
-        // if($(this).css('opacity') >= (max-threshold || pageLoad)){$(this).fadeTo(100,min);}
-      }
-    });
-  }
+  //   $('.fade').each(function(){
+  //     $element = $(this);
+  //
+  //     var element_height = $element.outerHeight();
+  //     var element_top_position = $element.offset().top;
+  //     var element_bottom_position = (element_top_position + element_height);
+  //
+  //     /* check the location of each desired element */
+  //     var objectBottom = $(this).offset().top + 200; //+ $(this).height();
+  //     // console.log(" object Bottom" ,objectBottom);
+  //     /* If the element is completely within bounds of the window, fade it in */
+  //     // console.log('objet bottom is : '+ objectBottom + " window_bottom_position is :" + window_bottom_position);
+  //     if(objectBottom < window_bottom_position){ // object comes into view (scrolling down)
+  //       if($(this).css('opacity') < (min+threshold || pageLoad)){$(this).fadeTo(300,max);}
+  //     }else {  // object goes out of view (scrolling up)
+  //       // if($(this).css('opacity') >= (max-threshold || pageLoad)){$(this).fadeTo(100,min);}
+  //     }
+  //   });
+  // }
 
   function arrow_fade(){
     var currWindowPosition = $(window).scrollTop();
@@ -70,7 +70,7 @@ $(document).ready(function(){
     }
   }
 
-  fade(true); // fade element at first header
+  // fade(true); // fade element at first header
 
   // If scroll is not in the header section opacity turn to 1
   // console.log($('html').scrollTop());
@@ -80,7 +80,7 @@ $(document).ready(function(){
     arrow_fade();
 
     // fade element in when scrolling down the first time
-    fade(true);
+    // fade(true);
   });
 
 
@@ -102,5 +102,21 @@ $(document).ready(function(){
     'right':'0',
     'top':'0'
   });
+
+  // scroll reveal
+  window.sr = ScrollReveal({
+    reset:false,
+    distance:'20px',
+    duration:600,
+    scale:1,
+    mobile:true,
+    viewFactor:0.3,
+    easing: 'cubic-bezier(0.35, 0,0.335, 1)'
+  });
+
+  sr.reveal(document.getElementById('header'),{origin:'right'});
+  sr.reveal(document.getElementById('background'));
+  sr.reveal(document.getElementById('experience'),{viewFactor: 0.2});
+  sr.reveal(document.getElementById('project'),{viewFactor: 0.05});
 
 });
