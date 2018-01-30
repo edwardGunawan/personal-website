@@ -75,35 +75,62 @@
 /*
   Header container layout
 */
+#header {
+  header {
+    &.header-container{
+      max-width:680px;
+      padding-top:200px;
+      line-height:1.2;
 
-header.header-container{
-  padding-top:200px;
-  max-width:680px;
-  line-height:1.2;
-  .subtitle{
-    letter-spacing:3px;
+      .subtitle{
+        letter-spacing:3px;
+      }
+
+      .title{
+        font-weight:400;
+        letter-spacing:2px;
+      }
+    }
+    @media screen and (max-width: 767px){
+      // decrease the size of the title of the header
+      &.hero-body{
+        padding:0.5rem 1.5rem;
+      }
+      /* title */
+      h2 {
+        font-size:25px;
+
+      }
+
+    }
+
+
+
+
+
   }
 
-  .title{
-    font-weight:400;
-    letter-spacing:2px;
+  #arrow-down {
+    padding-left:24px;
+    width:35px;
+
   }
 }
 
 
-#arrow-down {
-  padding-left:24px;
-  width:35px;
-}
+
+
 
 
 
 /*
-  only project section did not expand viewport height
+  This way, if the content is taller, the element will grow to
+  avoid the overflow
 */
-section:not(#project){
-  height:100vh;
+section{
+  min-height:100vh;
 }
+
 
 /*
   Background
@@ -131,7 +158,7 @@ section:not(#project){
     font-weight:500;
     padding-left:0;
     width:60%;
-    font-size:17px;
+    font-size:15px;
     letter-spacing:2px;
     color:inherit;
     transition: color .2s ease-in-out;
@@ -178,7 +205,7 @@ section:not(#project){
   // resume section
   .resume{
     padding-top:40px;
-    font-size:17px;
+    font-size:15px;
     // Transition when cursor
     a {
       color:inherit;
@@ -236,7 +263,7 @@ section:not(#project){
     height:auto;
   }
   // how text inside the image overlay
-  h3{
+  h4{
     position: absolute;
     padding-left:10px;
     padding-top: 10px;
@@ -249,6 +276,8 @@ section:not(#project){
 
   p {
     position:absolute;
+    text-align:left;
+    font-size:15px;
     bottom:5%;
     padding-left:10px;
   }
@@ -262,7 +291,7 @@ section:not(#project){
   Footer
 */
 #footer{
-  font-size:17px;
+  font-size:14px;
   font-weight:500;
   text-transform:capitalize;
   letter-spacing:1px;

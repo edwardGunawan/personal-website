@@ -10,15 +10,15 @@
   <div class="column is-offset-1 is-8 tile is-ancestor">
       {% assign image_files = site.static_files | where: "image", true %}
       <div class="tile is-parent is-vertical">
-      {% for myimage in image_files%}
+      {% for myimage in image_files %}
         {% if myimage.extname == '.JPG' %}
         <div class="img-container tile is-child">
           <figure class="is-square tile is-child">
             <a href="{{ myimage.link }}" target="_blank"> <img src="{{ myimage.path | relative_url }}" alt="{{ myimage.basename }}"/>
               <figcaption class="img-overlay" style="background-color:{%if myimage.title == 'Portfolio'%}#{% endif %}{{ myimage.backgroundColor }}">
-                <h3>{{ myimage.title }}
+                <h4>{{ myimage.title }}
                   <span>___</span>
-                </h3>
+                </h4>
                 <p> {{ myimage.description }}</p>
               </figcaption>
             </a>
