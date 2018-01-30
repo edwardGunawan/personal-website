@@ -5,7 +5,7 @@
   </div>
   <div class="background-description column is-8">
     {% for para in site.data.background %}
-    <p>{{ para }}</p>
+    {{ para }}
     {% endfor %}
     <div class="status-container">
       {% for resume in site.static_files %}
