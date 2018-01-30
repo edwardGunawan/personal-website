@@ -1,0 +1,617 @@
+/*
+color reference
+black ish: #0f1626
+maroon ish: #b7531b
+grayish color: #cdc9c9
+*/
+
+
+/* setting the body to gradient color */
+body {
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* set all font-family to roboto */
+* {
+  font-family:'Lato', sans-serif;
+}
+
+/* -------------- animation class ---------- */
+/* set initial of each element to be clear
+  for scrolling element
+ */
+.fade{
+  opacity:0;
+}
+
+
+/* --------- front page --------------- */
+.front-page{
+  margin: 0 auto;
+  padding:0 20px;
+  max-width: 680px;
+}
+
+
+/*
+  set the intro and the location to be
+  all upper case
+*/
+.introPre, #location{
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 100%;
+}
+
+
+#specialKeyword{
+  color: #b7531b;
+  font-weight:bold;
+  text-transform: uppercase;
+}
+
+
+/* when using something less than an Ipad tablet */
+@media (min-width: 640px){
+  /* two different typed of rendering but just leave it as it is */
+  .intro-main {
+    font-size: 2.2rem;
+    max-width:80%;
+    line-height:1.2;
+    font-weight:bold;
+    margin: 10px 0 20px;
+  }
+
+  header.intro-container.fade{
+    padding:130px 0 30px;
+  }
+
+}
+
+
+/* ----------- footer ------------- */
+#emailHover{
+  display:inline-block;
+  width:24px ;
+  height:29px ;
+  background:url("image/compressed/email-outline-black-min.png") no-repeat ;
+}
+
+/*
+  hover for each image on footer
+  so that it will be show the new
+  image when hover
+*/
+#emailHover:hover{
+  background:url("image/compressed/email-outline-min.png") no-repeat ;
+  width:24px;
+  height:29px;
+  background-color: #0f1626;
+  border: 1px solid #cdc9c9:
+}
+
+#githubHover{
+  display:inline-block;
+  width:24px ;
+   height:29px ;
+   background:url("image/compressed/github-circle-black-min.png") no-repeat ;
+}
+
+#githubHover:hover{
+  background:url("image/compressed/github-circle-min.png") no-repeat ;
+  width:24px;
+  height:29px;
+  /*border-radius:100%;*/
+  background-color: #0f1626;
+  border: 1px solid #cdc9c9:
+}
+#linkedInHover{
+  display:inline-block;
+  width:24px ;
+  height:29px ;
+  background:url("image/compressed/linkedin-black-min.png") no-repeat ;
+}
+
+#linkedInHover:hover{
+  background:url("image/compressed/linkedin-white-min.png") no-repeat ;
+  width:24px;
+  height:29px;
+  background-color: #0f1626;
+  border: 1px solid #cdc9c9:
+}
+
+.footer-links{
+  width:50%;
+  margin:auto;
+  text-align: center;
+}
+
+.copyright{
+  text-align: center;
+}
+footer small {
+  font-size:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------ Smartphones (landscape) ----------- */
+@media only screen and (min-width : 320px) {
+  /* Styles */
+
+  .header-section{
+    /*height:1%;*/
+    text-align: center;
+    font-size:20px;
+  }
+
+  .bottom-border{
+    width:60%;
+    margin:auto;
+    border-bottom:3px solid #0f1626;
+    height:2rem;
+  }
+
+  .about{
+    display:table;
+    border-bottom:1px solid #cdc9c9;
+  }
+
+  .main-page{
+    height:100vh;
+    border-bottom: 1px solid #cdc9c9;
+  }
+
+  .showcase-item{
+    height:50%;
+    width: 30%;
+    margin: 2% auto;
+  }
+
+
+  .showcase{
+    height:30%;
+    width:100%;
+    margin: 1.28% auto;
+  }
+
+  .intro-image, .showcaselist-image{
+    height:100px;
+    width:100px;
+    border-radius:100%;
+    box-shadow: 0 0 2px 0.5px #787878;
+    background-color: #fafafa;
+  }
+
+  .description-item{
+    height:50%;
+    width:80%;
+    margin:2% auto;
+  }
+
+  .title{
+    text-align: center;
+    margin:0 auto;
+  }
+
+  .content{
+    margin:2% auto;
+  }
+
+  td{
+    width:50%;
+  }
+
+
+  /* ---------- Project page -------------- */
+
+  .project, .project-list, .project-list ul, .project-list li{
+    margin:0;
+    padding:0;
+  }
+
+  .project{
+    display:table;
+    overflow:hidden;
+  }
+
+  .project-list li {
+    width: 80%;
+    line-height: 0;
+    margin:0 auto 0 auto;
+  }
+
+  .project-img{
+    display:inline-block;
+    width:100% !important;
+    height:auto !important;
+    opacity: 1.0;
+    overflow:hidden;
+    vertical-align:top;
+    filter: alpha(opacity=100); /* for IE8 and earlier */
+  }
+
+
+
+  .img-wrap {
+    display:inline-block;
+    background: black;
+    overflow:hidden;
+    padding: 0;
+    position:relative;
+  }
+
+   .img-wrap .project-img{
+    display: block;
+   -webkit-transition: all 0.2s linear;
+      -moz-transition: all 0.2s linear;
+       -ms-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+           transition: all 0.2s linear;
+  }
+
+   .img-wrap:hover img{
+    opacity:0.3;
+  }
+
+   .img-wrap .project-description{
+    visibility:hidden;
+    font-size:16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    line-height: 100%;
+  }
+
+   .img-wrap:hover .project-description{
+    color:#fff;
+    visibility:visible;
+    -webkit-transition: all 0.2s linear;
+       -moz-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+         -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+  }
+
+
+  /* ------ specific input for tablet ------ */
+  @media only screen and (max-width:768px){
+    .pure-menu-item{
+      width:30%;
+      margin-right:1%;
+    }
+
+    /* lower the font size for iphone 5,6,6plus for the front page */
+    .intro-main{
+      font-size:1.5rem;
+
+    }
+
+    .intro-container{
+      padding:150px 0 30px;
+    }
+
+    .introduction-showcase .showcase-item{
+      margin-top:5%;
+    }
+  }
+
+
+  li{
+    list-style-type: none;
+    position:relative;
+  }
+
+  .project{
+    border-bottom:2px solid #cdc9c9;
+    height:100vh;
+  }
+
+
+  /* -------------- contact -------------- */
+  .form h4{
+    text-align: center;
+    letter-spacing: 1.4px;
+    font-size:15px;
+    margin:10% auto;
+  }
+
+  .pure-form .message{
+    width:80%;
+    margin:auto;
+  }
+
+  /*
+    for rendering 648 or else it won't render
+  */
+  .message .pure-input-1-2{
+    width:100%;
+  }
+
+  .form .name-email{
+    width:50%;
+    margin:auto;
+  }
+
+  .contact{
+    border-bottom: 2px solid #cdc9c9;
+    height:100vh;
+  }
+
+  .submit-button{
+    margin:auto;
+    width:86.25px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* iPads, and desktop (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px){
+/* Styles */
+/* menu item */
+.pure-menu-item{
+  width:70px;
+}
+
+.pure-menu-item a {
+  padding:0;
+}
+
+.pure-menu-item:first-child{
+  width:40px;
+  padding-right:20px
+}
+
+/*----------- about page --------------- */
+.about{
+  border-bottom:1px solid #cdc9c9;
+  height:100vh;
+  width:100%;
+  /*max-width:1278px;*/
+  display:table;
+}
+
+
+.header-section{
+  height:1%;
+  text-align: center;
+  margin-bottom:40px
+}
+
+.bottom-border h4{
+  font-size: 2em;
+}
+
+.bottom-border{
+  border-bottom:3px solid #0f1626;
+  height: 50px;
+  width:60%;
+}
+
+/* --------------- header (intro) section of about page ------------ */
+.showcase{
+  display:table;
+  height:20%;
+  width:70%;
+}
+/* the introduction section words in the about page */
+#introduction{
+  font-size:20px;
+  float:left;
+  margin-left:30%;
+  max-width:400px;
+}
+
+.introduction-showcase{
+  margin-left:20%;
+}
+
+.intro-image {
+  height:150px;
+  width:150px;
+  border-radius:100%;
+
+}
+/* the image on the about page on the left */
+.showcaselist-image{
+  height:120px;
+  width:120px;
+  border-radius:100%
+  box-shadow: 0 0 2px 0.5px #787878;
+  background-color: #fafafa;
+}
+
+/* --------------- education and industry section in about page ---------- */
+
+/* the table for the education and the industry */
+  /* title of the table */
+  .title{
+    text-align: left;
+    margin:0 auto;
+    padding-left:6px;
+    border-left:4px solid #b7531b;
+    border-bottom:none;
+    width:auto;
+  }
+  /* the content of the table */
+  .content{
+    margin:2% 0; /* margin to be 0 on the left and right so that it will be align with the title */
+  }
+  td{
+    /*width:100%;*/
+  }
+/* ----------industry section------------- */
+/* the image on the left side of the about page */
+.showcase-item{
+  height:100%;
+  /*width: 100%;*/
+  margin-top: 2%;
+  position:absolute;
+  /*display: inline-block;*/
+  float:left;
+  /*display:table;*/
+}
+/* the table on the right side of the about page */
+.description-item{
+  /*display:table;*/
+  /*position:relative;*/
+  float:right;
+  /*margin-left:40%;*/
+  /*clear:both;*/
+  /*height:50%;*/
+  width:75%;
+  /*padding-left:30%;*/
+  vertical-align: middle;
+  letter-spacing: 1px;
+  margin:10px auto 60px 30px;
+}
+
+.clear {
+  clear:both;
+}
+
+  /* still inside of mid-width: 768 px section */
+  @media only screen and (min-width:1000px){
+    .showcase-list .showcase-item{
+      margin-right:0;
+      margin-left:20px;
+    }
+
+    .showcase-list .showcase{
+      max-width:60%;
+      display:table; /* to make it not overlap with the introduction image */
+    }
+
+    #tableEducation{
+      /*padding-left:30px;*/
+      /*margin-left:0;*/
+    }
+
+    /*-------- project ------- */
+    .project-list ul li{
+      display:inline-block;
+      width:60%;
+      position:relative;
+      clear:both;
+    }
+
+    .project-list .first-image-child{
+      margin:5% 20% 0;
+    }
+
+    .project-list .last-two-image{
+      width:30%;
+      height:187px;
+    }
+
+    .project-list .last-two-image:nth-of-type(2){
+      margin-left:20%;
+    }
+    .project-list .last-two-image:nth-last-of-type(3){
+      margin:0;
+      height:187px;
+    }
+
+
+    @media only screen and (min-width:1224px){
+      #introduction{
+        /*font-size:20px;*/
+      }
+
+      .description-item{
+        font-size:16px;
+        padding:0;
+      }
+
+      .showcase-list .showcase {
+        margin: 0 auto;
+        display:table; /* to solve the education image to not overlap with profile image */
+      }
+
+      .content .item-name{
+        width:40%;
+        padding:0;
+      }
+
+
+      /* My Image Introduction margin to be center on the web screen */
+      .intro-image{
+        margin-left:50px;
+      }
+    }
+  }
+/*--------- end here ----------- */
+
+/* the div for the introduction in the about page */
+
+
+  /* -------- Project ----------- */
+
+  .project{
+    border-bottom:2px solid #cdc9c9;
+    height:100vh;
+  }
+
+
+  /* ------------------- Contact ------------- */
+  .form h4{
+    font-size:20px;
+    margin:5% auto;
+
+  }
+
+  /*
+    making the width the same as the
+    name and email by making 50%
+  */
+  .pure-form .message{
+    /*width:639.5px;*/
+    width:50%;
+    margin: auto;
+  }
+
+  .message .pure-input-1-2{
+    width:100%;
+    height:200px;
+  }
+
+  .form .name-email input{
+    width:100%;
+
+  }
+
+  .contact{
+    border-bottom: 2px solid #cdc9c9;
+    height:100vh;
+  }
+
+  .submit-button{
+    width:71.95px;
+    /*width:100%;*/
+    margin:auto;
+    background-color: white;
+  }
+}

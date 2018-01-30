@@ -2,8 +2,19 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
-{% for files in site.static_files %}
+{% assign customJS = site.static_files | where: "customJS", true %}
+{% for files in customJS %}
   {% if files.extname == '.js' %}
     <script type="text/javascript" src="{{ files.path | relative_url }}"></script>
   {% endif %}
 {% endfor %}
+
+<!-- enable JS -->
+<noscript>
+  <h1 style="text-align:center;">
+    For full functionality of this page it is necessary
+    to enable JavaScript. Here are the
+     <a href="http://www.enable-javascript.com" target="_blank">
+       instructions how to enable JavaScript in your web browser</a>
+  </h1>
+</noscript>

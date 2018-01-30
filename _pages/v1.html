@@ -1,0 +1,270 @@
+---
+layout: page
+permalink: /v1/
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Edward Huang">
+    <meta name="description" content="Edward Huang Personal Website">
+    <meta name="keyword" content="website, computer science, html, css, Edward Huang, Edward, Gunawan,
+    UCSD, development, software engineer, Software developer, IBM">
+    <!-- good onall device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- in facebook -->
+    <meta content="{{ "/assets/v1/image/compressed/edward-profilepic-min.jpg" | relative_url }}" property=og:image>
+    <meta content="Personal Website" property=og:description>
+    <meta content="Edward Huang" property=og:title>
+    <meta property="og:image:width" content="200">
+    <meta property="og:image:height" content="200">
+
+    <!-- set expiration date on cache -->
+    <meta http-equiv="cache-control" content="public"/>
+    <meta http-equiv="expires" content="mon, April 27 2020 1:00:00 GMT"/>
+
+    <!-- twitter -->
+    <meta content="Edward Huang" name=twitter:title>
+    <meta name="twitter:image" content="{{ "/assets/v1/image/compressed/edward-profilepic-min.jpg" | relative_url }}">
+
+
+    <!-- for favicon in ms -->
+    <meta content={{ "/assets/v1/image/compressed/profile-pic-min.jpg" | relative_url }} name=msapplication-TileImage>
+    <meta content=#ece9e6 name=maspplication-TileColor>
+    <meta content=text/html http-equiv=content-type>
+    <meta content="IE=Edge" http-equiv=X-UA-Compatible>
+
+    <!-- what to mention in http header -->
+    <meta http-equiv="content-type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+
+
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+    </style>
+    <link rel="short icon" href="{{ "/assets/v1/image/favicon.ico" | relative_url }}" type="image/x-icon"> <!-- adding icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" media="screen">
+    <link rel="stylesheet" href="{{ "/assets/v1/stylesheet.css" | relative_url }}" media="screen">
+
+    <title>Edward Huang</title>
+  </head>
+
+  <body>
+
+    <!--================ front page ===================-->
+    <section class="main-page">
+      <article class="front-page ">
+        <header class="intro-container fade">
+          <h2 class="intro-pre">Hello,</h2>
+          <h1 class="intro-main">My name is <span id="name">Edward Huang<span>,
+            a software engineer who loves to build and<span style="padding-left:6px;" id="things"> </span></h1>
+
+          <h5 id="location">
+            {% raw %}
+            {{location}}
+            {% endraw %}
+          </h5>
+
+        </header>
+
+
+        <nav class="nav pure-menu-list pure-menu-horizontal">
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="mailto:edwardgunawan880@yahoo.com" class="pure-menu-link">Email</a></li>
+            <li class="pure-menu-item"><a href="https://www.linkedin.com/in/edward-huang/" class="pure-menu-link" target="_blank"> LinkedIn</a></li>
+            <li class="pure-menu-item"><a href="{{ "/assets/v1/image/resume.pdf"| relative_url }}" class="pure-menu-link" target="_blank"> Resume </a></li>
+          </ul>
+        </nav>
+      </article>
+    </section>
+
+
+    <main>
+
+      <section class="about">
+        <header class="header-section fade">
+          <div class="bottom-border special">
+            <h4>Welcome!</h4>
+          </div>
+        </header>
+
+        <article class="showcase introduction-showcase fade">
+              <div class="showcase-item">
+                <img src="{{ "/assets/v1/image/compressed/profile-pic-min.jpg" | relative_url }}" class="intro-image" alt="Edward's Image">
+              </div>
+
+              <div class="description-item" id="introduction">
+                  <p>
+                    <!-- need to put it here for raw html on the handlebar syntax or else it will not show -->
+                    {% raw %}
+                    {{{introduction}}}
+                    {% endraw %}
+                  </p>
+              </div>
+
+        </article>
+
+        <article class="showcase-list ">
+          <article class="showcase fade" style="">
+              <div  class="showcase-item">
+                <img src="{{ "/assets/v1/image/compressed/education-min.png" | relative_url }}" class="showcaselist-image" alt="education">
+              </div>
+              <div id="tableEducation" class="description-item">
+              </div>
+          </article>
+          <!--==================== end education ==================-->
+          <div class="clear">
+          </div>
+
+          <!--======================= industry ==============-->
+          <article class="showcase fade">
+              <div class="showcase-item">
+                <img src="{{ "assets/v1/image/compressed/career-min.png" | relative_url }}" class="showcaselist-image" alt="education">
+              </div>
+              <div id="tableIndustry" class="description-item">
+              </div>
+          </article>
+
+        </article>
+
+        <!--==================== end industry ===============-->
+      </section>
+      <!--=================== end about =================-->
+      <div class="clear">
+      </div>
+
+      <!--===================== project ================-->
+      <section class="project">
+        <header class="header-section fade">
+            <div class="bottom-border">
+              <h4>Project</h4>
+            </div>
+        </header>
+        <article class="project-list">
+        </article>
+      </section>
+      <!--==================== end project ===============-->
+
+      <!--===================== contact -=================-->
+      <section class="contact">
+        <header class="header-section">
+          <div class="bottom-border fade">
+            <h4>Contact</h4>
+          </div>
+        </header>
+        <!-- <hr class="special-hr"> -->
+
+        <form class="pure-form form " action="https://formspree.io/edwardgunawan880@yahoo.com" method="post">
+          <h4>Leave a Message!</h4>
+          <fieldset class="name-email pure-group fade">
+              <input id="name"  type="text" name="name" placeholder="Name*" required/>
+              <input id="email" type="email"  name="__replyto" placeholder="Email*" required/>
+            </fieldset>
+
+            <fieldset class="message pure-group fade">
+              <textarea name="body" class="pure-input-1-2" placeholder="Message*" rows="8" cols="80"></textarea>
+            </fieldset>
+            <div class="submit-button">
+              <input type="submit" name="submit" class="pure-button" value="Send!">
+            </div>
+
+        </form>
+      </section>
+      <!--=================== end contact ======================-->
+
+    </main>
+
+
+    <!--=============== end main =======================-->
+
+
+      <!--============== footer ===========-->
+    <footer>
+      <div class="footer-links">
+        <a id="emailHover" href="mailto:edwardgunawan880@yahoo.com"></a>
+        <a id="githubHover" href="https://github.com/edwardGunawan/" target="_blank"></a>
+        <a id="linkedInHover" href="https://www.linkedin.com/in/edward-huang" target="_blank"></a>
+      </div>
+      <div class="copyright">
+        <small>&copy; Edward Huang</small>
+      <div>
+    </footer>
+    <!--============== end footer =============-->
+
+
+    <!-- for rendering the front page -->
+    <ul id="renderThings" style="display:none">
+      <li>cooking</li>
+      <li>travel</li>
+      <li>read books</li>
+      <li>drink coffee</li>
+      <li>go swimming</li>
+    </ul>
+
+  </body>
+
+
+
+
+
+
+
+
+  <!-- script for table template -->
+
+  <script type="text/x-handlebars-template" id="tableTemplate">
+
+      <h3 class="title">
+        {% raw %}
+        {{{title}}}
+        {% endraw %}
+      </h3>
+      <table class="content">
+        <tbody>
+          {% raw %}
+          {{#trs}}
+          {% endraw %}
+          <tr>
+            <td class="item-name">{% raw %}{{{key}}}{% endraw %}</td>
+            <td>{% raw %}{{value}}{% endraw %}</td>
+          </tr>
+          {% raw %}
+          {{/trs}}
+          {% endraw %}
+        </tbody>
+      </table>
+  </script>
+
+  <!-- script for unorder list template -->
+  <script type="text/x-handlebars-template" id="listTemplate">
+      <ul>
+        {% raw %}
+        {{#projects}}
+        {% endraw %}
+        <li class="{% raw %}{{class}}{% endraw %}">
+          {% assign siteUrl = page.baseurl %}
+          <a href="{% raw %}{{link}}{% endraw %}" target="{{ siteUrl }} + {% raw %}{{target}}{% endraw %}" class="img-wrap"><img src="{% raw %}{{img}}{% endraw %}" class="project-img" alt="{% raw %}{{name}}{% endraw %}">
+            <span class="project-description">{% raw %}{{name}}{% endraw %}</span>
+          </a>
+
+        </li>
+        {% raw %}
+        {{/projects}}
+        {% endraw %}
+      </ul>
+
+  </script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src="{{ "/assets/v1/script.js" | relative_url }}" type="text/javascript"></script>
+
+
+</html>

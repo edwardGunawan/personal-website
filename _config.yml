@@ -44,11 +44,15 @@ defaults:
       image: true # look for jekyll assets img site
     # setting front-matter for project image
   - scope:
+      path: assets/custom_js
+    values:
+      customJS: true
+  - scope:
       path: assets/img/Portfolio.JPG
     values:
       title: Portfolio
       backgroundColor: ece9e6
-      link: http://www.edwardhuang1.me/
+      link: /v1/
       description: First iteration portfolio. Designed and developed with a concious effort avoid using any framework.
   - scope:
       path: assets/img/TimerApp.JPG
