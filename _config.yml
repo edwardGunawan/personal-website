@@ -39,26 +39,26 @@ sass:
 # set frontmatter values through defaults
 defaults:
   - scope:
-      path: /assets/img
+      path: assets/img
     values: # set the front-matter variable in the static file
       image: true # look for jekyll assets img site
     # setting front-matter for project image
   - scope:
-      path: /assets/img/Portfolio.JPG
+      path: assets/img/Portfolio.JPG
     values:
       title: Portfolio
       backgroundColor: ece9e6
       link: http://www.edwardhuang1.me/
       description: First iteration portfolio. Designed and developed with a concious effort avoid using any framework.
   - scope:
-      path: /assets/img/TimerApp.JPG
+      path: assets/img/TimerApp.JPG
     values:
       title: Timer-app
       backgroundColor: hsl(0, 0%, 100%)
       link: http://react-timer-app-gunawan.herokuapp.com/#/?_k=vfeyg7
       description: Timer app provides timer. Designed using react to create modular layout and liquid codebase.
   - scope:
-      path: /assets/img/TrackMe.JPG
+      path: assets/img/TrackMe.JPG
     values:
       title: TrackMe
       backgroundColor: hsl(0, 0%, 100%)
