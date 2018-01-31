@@ -38,5 +38,11 @@
   <!-- what to mention in http header -->
   <meta http-equiv="content-type" content="text/html">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <!-- adding google analytics -->
+  {% if site.google_analytics and jekyll.environment == "production" %}
+  {% include google_analytics.html %}
+  {% endif %}
+
   <title>{{ site.title }}</title>
 </head>
