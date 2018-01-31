@@ -10,7 +10,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 3.7.0"
 
-gem 'jekyll-sitemap'
+
 
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -20,6 +20,8 @@ gem 'jekyll-sitemap'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-sitemap"
+  gem "jekyll-minifier"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -21,11 +21,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://edward-huang.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: edwardGunawan
 
-# jekyll plugins
-plugins:
-  - jekyll-sitemap
-
-
 # Build settings
 markdown: kramdown
 
@@ -75,14 +70,23 @@ defaults:
 
 
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - "README.md"
+  - "build"
+
+keepfiles:
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
+
+# jekyll plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-minifier
