@@ -21,6 +21,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://edward-huang.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: edwardGunawan
 
+# jekyll plugins
+plugins:
+  - jekyll-sitemap
+
 
 # Build settings
 markdown: kramdown
