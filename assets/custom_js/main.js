@@ -23,39 +23,6 @@ var options = {
 $(document).ready(function(){
   const controller = new SweetScroll(options);
 
-    /* windows fade in and out when scrolling down  */
-  // function fade(pageLoad){
-  //   $window = $(window);
-  //
-  //   var window_height = $window.height();
-  //   var window_top_position = $window.scrollTop();
-  //   var window_bottom_position = (window_top_position + window_height);
-  //   // var windowBottom = $(window).scrollTop() + $(window).innerHeight();
-  //
-  //   var min = 0.1;
-  //   var max = 0.9;
-  //   var threshold = 0.04;
-
-  //   $('.fade').each(function(){
-  //     $element = $(this);
-  //
-  //     var element_height = $element.outerHeight();
-  //     var element_top_position = $element.offset().top;
-  //     var element_bottom_position = (element_top_position + element_height);
-  //
-  //     /* check the location of each desired element */
-  //     var objectBottom = $(this).offset().top + 200; //+ $(this).height();
-  //     // console.log(" object Bottom" ,objectBottom);
-  //     /* If the element is completely within bounds of the window, fade it in */
-  //     // console.log('objet bottom is : '+ objectBottom + " window_bottom_position is :" + window_bottom_position);
-  //     if(objectBottom < window_bottom_position){ // object comes into view (scrolling down)
-  //       if($(this).css('opacity') < (min+threshold || pageLoad)){$(this).fadeTo(300,max);}
-  //     }else {  // object goes out of view (scrolling up)
-  //       // if($(this).css('opacity') >= (max-threshold || pageLoad)){$(this).fadeTo(100,min);}
-  //     }
-  //   });
-  // }
-
   function arrow_fade(){
     var currWindowPosition = $(window).scrollTop();
     var headerPosition = $('header').offset().top;
@@ -70,17 +37,12 @@ $(document).ready(function(){
     }
   }
 
-  // fade(true); // fade element at first header
-
   // If scroll is not in the header section opacity turn to 1
   // console.log($('html').scrollTop());
-  $(document).scroll(() => {
+  $(document).scroll(function() {
 
     // top arrow will fade when it is not the header
     arrow_fade();
-
-    // fade element in when scrolling down the first time
-    // fade(true);
   });
 
 
@@ -92,6 +54,21 @@ $(document).ready(function(){
     particleRadius:5,
     lineWidth:0.5,
     parallax:true // create that parallax affect
+  });
+
+  // background-link hover create a border underneath
+  $('.background-link').hover( function() { // handler-in
+    $(this).css(
+      {
+        "border-bottom": "3px solid black"
+      }
+    );
+  }, function() { // handler-out
+    $(this).css(
+      {
+        "border-bottom": "none"
+      }
+    );
   });
 
   // to make the section on top of the canvas
