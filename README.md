@@ -11,8 +11,8 @@ Hello! Thanks for checking out this repo for my latest portfolio website. This w
 -  [Scroll Reveal](https://scrollrevealjs.org/) - easy scroll animation
 - [Site map generator](https://www.xml-sitemaps.com/)
 
-# How to Run the development and production and push the code
-- git clone <repo> my_site
+#  How to Run the Development(Local) push to Production
+- git clone https://github.com/edwardGunawan/personal-website.git my_site
 - run **jekyll serve --config "_config.yml,_config_dev.yml"**
 - change something on `_config_dev.yml`
 - copy paste to `_config.yml`
