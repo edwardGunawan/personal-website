@@ -61,21 +61,21 @@ defaults:
     values:
       title: Timer-app
       backgroundColor: hsl(0, 0%, 100%)
-      link: http://react-timer-app-gunawan.herokuapp.com/#/?_k=vfeyg7
+      link: https://github.com/edwardGunawan/ReactTimerApp
       description: Timer app provides timer. Designed using react to create modular layout and liquid codebase.
   - scope:
       path: assets/img/TrackMe.JPG
     values:
       title: TrackMe
       backgroundColor: hsl(0, 0%, 100%)
-      link: http://trackme-gunawan.herokuapp.com/#/?_k=hi4xgt
+      link: https://github.com/edwardGunawan/TrackMe
       description: React application of helping re-arranging your todo list.
   - scope:
       path: assets/img/MoocSearch.JPG
     values:
       title: MoocSearch
       backgroundColor: hsl(0, 0%, 100%)
-      link: http://www.moocsearch.net
+      link: https://github.com/edwardGunawan/mooc_search
       description: Search Engine for Online Courses from Udemy, Udacity, and Iversity.
 
 
