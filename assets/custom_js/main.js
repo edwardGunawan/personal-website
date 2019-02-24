@@ -21,6 +21,7 @@ var options = {
 
 
 $(document).ready(function(){
+
   const controller = new SweetScroll(options);
 
   function arrow_fade(){
@@ -95,5 +96,9 @@ $(document).ready(function(){
   sr.reveal(document.getElementById('background'));
   sr.reveal(document.getElementById('experience'),{viewFactor: 0.2});
   sr.reveal(document.getElementById('project'),{viewFactor: 0.05});
+
+
+  
+  
 
 });

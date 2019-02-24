@@ -16,7 +16,7 @@
 title: Edward Huang | Software Engineer
 name: Edward Huang
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to Edward Huang's Personal Website. I am not a regular college graduate..
+  Welcome to Edward Huang's Personal Website. I am not your typical software engineer..
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.edward-huang.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: edwardGunawan

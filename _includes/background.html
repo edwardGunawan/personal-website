@@ -1,18 +1,31 @@
 
 <div class="background-container columns">
   <div class="background-title column is-narrow is-offset-1 is-2">
-    <h5> Background </h5>
+    <h5> More About Me </h5>
   </div>
-  <div class="background-description column is-8">
-    {% for para in site.data.background %}
-    {{ para }}
-    {% endfor %}
-    <div class="status-container">
-      {% for resume in site.static_files %}
-        {% if resume.extname == '.pdf' %}
-          <a id="status" class="column" target="_blank" href="{{ resume.path | relative_url }}">Currently seeking full-time opportunities!</a>
-        {% endif %}
+  <div class="column is-8 container">
+    <div class="container-profile-pic">
+      {% for image in site.static_files  | where: "image", true %}
+      {% if image.path contains 'assets/img/profile/profile' %}
+      <div class="image-cropper">
+        <img src="{{image.path}}" alt="profile-pic" id="profilePic" class="background-masker" />
+      </div>
+      {% endif %}
       {% endfor %}
     </div>
+    <div class="background-description">
+      {% for para in site.data.background %}
+      {{ para }}
+      {% endfor %}
+      <div class="status-container">
+        {% for resume in site.static_files %}
+        {% if resume.extname == '.pdf' %}
+        <a id="status" class="column" target="_blank" href="{{ resume.path | relative_url }}">Currently seeking full-time
+          opportunities!</a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
+  
 </div>

@@ -48,6 +48,7 @@
     100% { top: 0; }
 }
 
+
 /*
   Arrow up for fixed position
   So that when scroll down it will always be on the
@@ -97,10 +98,6 @@
 
     }
 
-
-
-
-
   }
 
   #arrow-down {
@@ -109,11 +106,6 @@
 
   }
 }
-
-
-
-
-
 
 
 /*
@@ -134,11 +126,37 @@ section{
       color:$grey;
     }
   }
-  .background-description{
-    font-size:17px;
+
+  /*
+    Profile pictures
+  */
+  .container-profile-pic {
+    width:30%;
+    border-radius:50%;
+    height:auto;
+    float:left;
+  }
+
+  .image-cropper {
+    width:200px;
+    height:200px;
+    position:relative;
+    overflow:hidden;
+    border-radius:50%;
+  }
+
+  #profilePic {
+    display: inline;
+    margin:0 auto;
   }
 
 
+  /*
+    Background description
+  */
+  .background-description{
+    font-size:17px;
+  }
 
   /*
     Status word in background
@@ -161,6 +179,8 @@ section{
     color:$belizehole;
     text-decoration:underline;
   }
+
+
 }
 
 
