@@ -48,6 +48,16 @@
     100% { top: 0; }
 }
 
+/*
+  Mixin for widthProfile picture in background
+  1023px will be the size of the max tablet
+*/
+@mixin widthProfilePic() {
+  @media screen and (max-width: 1023px){ 
+    width: 60%;
+  }
+  width: 30%;
+}
 
 /*
   Arrow up for fixed position
@@ -124,6 +134,7 @@ section{
   .background-title{
     h5{
       color:$grey;
+      text-align: center;
     }
   }
 
@@ -131,10 +142,10 @@ section{
     Profile pictures
   */
   .container-profile-pic {
-    width:30%;
+    @include widthProfilePic();
     border-radius:50%;
     height:auto;
-    float:left;
+    margin:0 auto;
   }
 
   .image-cropper {
@@ -142,7 +153,7 @@ section{
     height:200px;
     position:relative;
     overflow:hidden;
-    border-radius:50%;
+    border-radius:50%; 
   }
 
   #profilePic {
