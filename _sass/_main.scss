@@ -48,16 +48,6 @@
     100% { top: 0; }
 }
 
-/*
-  Mixin for widthProfile picture in background
-  1023px will be the size of the max tablet
-*/
-@mixin widthProfilePic() {
-  @media screen and (max-width: 1023px){ 
-    width: 60%;
-  }
-  width: 30%;
-}
 
 /*
   Arrow up for fixed position
@@ -142,10 +132,14 @@ section{
     Profile pictures
   */
   .container-profile-pic {
-    @include widthProfilePic();
+    width: 30%;
     border-radius:50%;
     height:auto;
     margin:0 auto;
+
+    @media screen and (max-width: 1023px){ 
+      width: 60%;
+    }
   }
 
   .image-cropper {
